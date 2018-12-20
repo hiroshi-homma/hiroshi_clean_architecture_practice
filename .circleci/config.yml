@@ -1,0 +1,54 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/code
+    branches:
+      only:
+        - master
+        - develop
+    docker:
+      # specify the version you desire here
+      - image: circleci/android:api-26-alpha
+
+    environment:
+      # Customize the JVM maximum heap limit
+      JVM_OPTS: -Xmx3200m
+      TERM: dumb
+      ADB_INSTALL_TIMEOUT: "10"
+
+    steps:
+      - checkout
+      # Download and cache dependencies
+      - restore_cache:
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+
+      - run:
+          name: update android sdk
+          command: |
+              echo y | android update sdk --no-ui --all --filter tool,extra-android-m2repository,extra-google-google_play_services,extra-google-m2repository,android-26
+              echo y | android update sdk --no-ui --all --filter build-tools-26.0.0
+
+      - run:
+          name: gradle dependencies
+          command: ./gradlew androidDependencies
+
+      - save_cache:
+          paths: ~/.gradle
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+
+      # Build apk! (Artifact regist)
+      - run:
+          name: Build apk
+          command: ./gradlew assembleDebug
+      - store_artifacts:
+          path: app/build/outputs/apk/debug/app-debug.apk
+          destination: app-debug.apk
+      - store_artifacts:
+          path: app/build/outputs/logs/manifest-merger-debug-report.txt
+          destination: manifest-merger-debug-report.txt
+      - run:
+          name: Greeting
+          command: echo Hello, world.
+      - run:
+          name: Print the Current Time
+          command: date

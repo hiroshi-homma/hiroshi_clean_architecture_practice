@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">Hiroshi Sample Kotlin</string>
+    <string name="action_refresh">Refresh</string>
+
+    <string name="failure_network_connection">No Network Connection.</string>
+    <string name="failure_server_error">Server Error</string>
+    <string name="failure_movies_list_unavailable">Movies Unavailable.</string>
+    <string name="failure_movie_non_existent">Movie Not Existent.</string>
+
+    <string name="test_name">Test Title</string>
+
+    <!-- Navigation Drawer -->
+    <string name="navigation_drawer_open">navigation_drawer</string>
+    <string name="navigation_drawer_close">navigation_drawer</string>
+    <string name="nav_header_title">Test User</string>
+    <string name="nav_header_subtitle">test.user@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">設定</string>
+    <string name="action_settings1">設定1</string>
+    <string name="action_settings2">設定2</string>
+    <string name="action_settings3">設定3</string>
+    <string name="action_settings4">設定4</string>
+    <string name="action_settings5">設定5</string>
+    <string name="action_settings6">設定6</string>
+    <string name="action_settings7">設定7</string>
+    <string name="action_settings8">設定8</string>
+
+    <string name="header">ヘッダー名出現</string>
+
+    <string name="communicate1">category1</string>
+    <string name="communicate2">category2</string>
+    <string name="Import">menu1</string>
+    <string name="gallery">menu2</string>
+    <string name="slideshow">menu3</string>
+    <string name="tools">menu4</string>
+    <string name="share">menu5</string>
+    <string name="send">menu6</string>
+    <string name="button">広告表示</string>
+    <string name="detail_title">詳細画面</string>
+    <string name="empty">EMPTY</string>
+    <string name="enable_loop">Enable Loop</string>
+    <string name="auto_scroll">Auto Scroll</string>
+    <string name="check">check</string>
+
+    <!-- Right Menu -->
+    <string-array name="indicator_style">
+        <item>None</item>
+        <item>Circle</item>
+        <item>Icon</item>
+    </string-array>
+    <string-array name="indicator_gravity_hor">
+        <item>Left</item>
+        <item>Right</item>
+        <item>Center</item>
+    </string-array>
+    <string-array name="indicator_gravity_ver">
+        <item>Top</item>
+        <item>Bottom</item>
+        <item>Center</item>
+    </string-array>
+
+</resources>

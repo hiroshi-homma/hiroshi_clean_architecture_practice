@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Base colors-->
+    <color name="colorPrimary">#03DAC6</color>
+    <color name="colorAccent">#F8F8F8</color>
+    <color name="colorSecondary">#7f1a18</color>
+    <color name="colorTextPrimary">#FFFFFF</color>
+    <color name="colorTextSecondary">#7f1a18</color>
+
+    <color name="translucentBackground">#ED363636</color>
+    <color name="textColor">#252525</color>
+    <color name="colorPrimaryDark">#03DAC6</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="theme_F44336">#F44336</color>
+    <color name="theme_2196F3">#2196F3</color>
+    <color name="theme_8BC34A">#8BC34A</color>
+    <color name="theme_FFC107">#FFC107</color>
+    <color name="theme_03DAC6">#03DAC6</color>
+    <color name="theme_018786">#018786</color>
+    <color name="theme_E9E9E9">#E9E9E9</color>
+    <color name="theme_696969">#696969</color>
+    <color name="theme_F8F8F8">#F8F8F8</color>
+    <color name="theme_F9F9F9">#F9F9F9</color>
+
+</resources>

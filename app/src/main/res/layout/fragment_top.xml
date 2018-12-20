@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/colorAccent"
+      android:orientation="vertical"
+      tools:ignore="UselessParent">
+
+    <tabrelationlibrary.TabRelationLibrary
+        android:id="@+id/tab_relation_library"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/theme_8BC34A"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+      <!-- TODO: InfiniteLoopのバグが修正できたら -->
+      <!--<CheckBox-->
+          <!--android:id="@+id/loop"-->
+          <!--android:layout_width="wrap_content"-->
+          <!--android:layout_height="match_parent"-->
+          <!--android:layout_marginStart="10dp"-->
+          <!--android:layout_weight="1"-->
+          <!--android:text="@string/enable_loop" />-->
+
+      <CheckBox
+          android:id="@+id/autoscroll"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:text="@string/auto_scroll" />
+    </LinearLayout>
+
+    <com.tmall.ultraviewpager.UltraViewPager
+        android:id="@+id/ultra_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/darker_gray" />
+  </LinearLayout>
+
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      android:id="@+id/seekbar_zone"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginTop="30dp"
+      android:background="@null">
+
+    <com.jaygoo.widget.RangeSeekBar
+        android:id="@+id/RangeSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        app:rsb_mode="single"
+        android:background="#55018786"
+        app:rsb_tick_mark_gravity="center"
+
+        app:rsb_progress_color="@color/colorWhite"
+        app:rsb_progress_default_color="@color/theme_018786"
+
+        app:rsb_thumb_drawable="@drawable/seekbar_thumb"
+
+        app:rsb_indicator_text_size="13sp"
+        app:rsb_indicator_height="25dp"
+        app:rsb_indicator_width="90dp"
+        app:rsb_indicator_background_color="@color/theme_018786"
+        app:rsb_indicator_padding_left="0dp"
+        app:rsb_indicator_padding_right="0dp"
+        app:rsb_indicator_padding_top="0dp"
+        app:rsb_indicator_padding_bottom="0dp"
+        app:rsb_indicator_margin="1dp"
+        app:rsb_indicator_arrow_size="6dp"
+        app:rsb_indicator_radius="8dp"
+        app:rsb_indicator_show_mode="showWhenTouch"/>
+  </LinearLayout>
+</RelativeLayout>
